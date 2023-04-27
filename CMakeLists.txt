@@ -14,4 +14,4 @@ link_directories(${SOURCE_ROCKSDB_PROJECT}/cmake-build-debug)
 add_executable(research_rocksdb
         main.cc)
 
-target_link_libraries(research_rocksdb librocksdb.dylib)
+target_link_libraries(research_rocksdb librocksdb.a)
