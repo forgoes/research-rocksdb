@@ -5,8 +5,11 @@ set(CMAKE_CXX_STANDARD 17)
 
 include_directories(.)
 
-include_directories($ENV{HOME}/github/facebook/rocksdb/include)
-link_directories($ENV{HOME}/github/facebook/rocksdb/cmake-build-debug)
+set(SOURCE_ROCKSDB_PROJECT "$ENV{HOME}/github/facebook/rocksdb")
+
+include_directories(${SOURCE_ROCKSDB_PROJECT})
+include_directories(${SOURCE_ROCKSDB_PROJECT}/include)
+link_directories(${SOURCE_ROCKSDB_PROJECT}/cmake-build-debug)
 
 add_executable(research_rocksdb
         main.cc)
